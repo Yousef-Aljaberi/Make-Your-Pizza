@@ -322,7 +322,7 @@
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Tahoma", 21.9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblTotalPrice.ForeColor = System.Drawing.Color.YellowGreen;
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.Blue;
             this.lblTotalPrice.Location = new System.Drawing.Point(413, 805);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(219, 88);
@@ -397,6 +397,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackgroundImage = global::Make_Your_Pizza.Properties.Resources.photo_2026_09_17_19_39_33;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2245, 1320);
             this.Controls.Add(this.grbOrderSummry);

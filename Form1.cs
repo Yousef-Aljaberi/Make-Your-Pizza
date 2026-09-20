@@ -213,8 +213,9 @@ namespace Make_Your_Pizza
             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 MessageBox.Show("Order Placed Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DisableForm();
             }
-            DisableForm();
+          
         }
         void DisableForm()
         {
