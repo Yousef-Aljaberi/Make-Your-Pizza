@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Resources\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -76,27 +79,37 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\app.manifest" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\photo_2026-09-17_19-27-14.jpg" />
+    <None Include="Resources\1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\photo_2026-09-17_19-27-141.jpg" />
+    <None Include="Resources\2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\photo_2026-09-17_19-31-44.jpg" />
+    <None Include="Resources\3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\photo_2026-09-17_19-34-30.jpg" />
+    <None Include="Resources\4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\photo_2026-09-17_19-34-37.jpg" />
+    <None Include="Resources\5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\photo_2026-09-17_19-39-33.jpg" />
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\اصنع بيتزا بنفسك.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\اصنع بيتزا بنفسك1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

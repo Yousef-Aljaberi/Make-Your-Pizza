@@ -63,9 +63,9 @@ namespace Make_Your_Pizza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_2026_09_17_19_27_14 {
+        internal static System.Drawing.Bitmap _1 {
             get {
-                object obj = ResourceManager.GetObject("photo_2026-09-17_19-27-14", resourceCulture);
+                object obj = ResourceManager.GetObject("1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Make_Your_Pizza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_2026_09_17_19_27_141 {
+        internal static System.Drawing.Bitmap _2 {
             get {
-                object obj = ResourceManager.GetObject("photo_2026-09-17_19-27-141", resourceCulture);
+                object obj = ResourceManager.GetObject("2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Make_Your_Pizza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_2026_09_17_19_31_44 {
+        internal static System.Drawing.Bitmap _3 {
             get {
-                object obj = ResourceManager.GetObject("photo_2026-09-17_19-31-44", resourceCulture);
+                object obj = ResourceManager.GetObject("3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Make_Your_Pizza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_2026_09_17_19_34_30 {
+        internal static System.Drawing.Bitmap _4 {
             get {
-                object obj = ResourceManager.GetObject("photo_2026-09-17_19-34-30", resourceCulture);
+                object obj = ResourceManager.GetObject("4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Make_Your_Pizza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_2026_09_17_19_34_37 {
+        internal static System.Drawing.Bitmap _5 {
             get {
-                object obj = ResourceManager.GetObject("photo_2026-09-17_19-34-37", resourceCulture);
+                object obj = ResourceManager.GetObject("5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,39 @@ namespace Make_Your_Pizza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_2026_09_17_19_39_33 {
+        internal static System.Drawing.Bitmap _6 {
             get {
-                object obj = ResourceManager.GetObject("photo_2026-09-17_19-39-33", resourceCulture);
+                object obj = ResourceManager.GetObject("6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8 {
+            get {
+                object obj = ResourceManager.GetObject("8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap اصنع_بيتزا_بنفسك {
+            get {
+                object obj = ResourceManager.GetObject("اصنع بيتزا بنفسك", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap اصنع_بيتزا_بنفسك1 {
+            get {
+                object obj = ResourceManager.GetObject("اصنع بيتزا بنفسك1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

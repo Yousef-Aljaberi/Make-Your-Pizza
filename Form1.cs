@@ -19,214 +19,191 @@ namespace Make_Your_Pizza
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            BackgroundImage = Properties.Resources.photo_2026_09_17_19_39_33;
-            BackgroundImageLayout = ImageLayout.Stretch;
             UpdateOrderSummray();
         }
-        void UpdateOrderSummray()
-        {
-            UpdateCrust();
-            UpdateSize();
-            UpdateToppings();
-            UpdateWhereEat();
-        }
-        double getSizePrice()
-        {
-            return radlarg.Checked ? 15 : radmedium.Checked ? 10 : radsmall.Checked ? 5 : 0;
-        }
-        double getCrustPrice()
-        {
-            return radThick.Checked ? 10 : radThin.Checked ? 5 : 0;
-        }
-        double getToppingsPrice()
-        {
-            double price = 0;
-            foreach (Control c in grpToppings.Controls)
-            {
-                if (c is CheckBox topping && topping.Checked)
-                {
-                    price += Convert.ToDouble(topping.Tag);
-                }
-            }
-            return price;
-        }
-        void UpdateTotalPrice()
-        {
-            lblTotalPrice.Text = $" {getSizePrice() + getCrustPrice() + getToppingsPrice()}$";
-        }
-        void UpdateSize()
-        {
-            UpdateTotalPrice();
-            string size = radlarg.Checked ? "Large" : radmedium.Checked ? "Medium" : radsmall.Checked ? "small" : "";
-            lblSize.Text = "Size: " + size;
-        }
-        void UpdateCrust()
-        {
-            UpdateTotalPrice();
-            string crustType = radThick.Checked ? "Thick" : radThin.Checked ? "Thin" : "";
-            lblcrustType.Text = "Crust Type: " +   crustType;
-        }
-        void UpdateToppings()
-        {
-            UpdateTotalPrice();
-            string Toppings = "";
-            if (chkExtra.Checked) Toppings += "Extra Cheese, ";
-            if (chkmushrooms.Checked) Toppings += "Mushroom, ";
-            if (chktomato.Checked) Toppings += "Tomato, ";
-            if (chkOnion.Checked) Toppings += "Onion, ";
-            if (chkOlives.Checked) Toppings += "Olives, ";
-            if (chkPeppers.Checked) Toppings += "Green Peppers, ";
-            if (Toppings == "") lblToppings.Text = "No Toppings.";
-            else
-            {
-                if (Toppings.EndsWith(", "))
-                {
-                    Toppings = Toppings.Substring(0, Toppings.Length - 2);
-                }
-                lblToppings.Text = Toppings;
-            }
-
-
-        }
-        void UpdateWhereEat()
-        {
-            string WhereEat =radEatIn.Checked ? "In" : radEatOut.Checked ? "Out" : "";
-            lblWhereToEat.Text = "Where to Eat: "+ WhereEat;
-
-        }
-        private void grpOrderSummry_Enter(object sender, EventArgs e)
-        {
-
-        }
+   
+      
         private void btnReset_Click(object sender, EventArgs e)
         {
-            ResetForm();
-
+            ResetFrom();
+            
         }
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            Orderd();
+           DisableForm();
         }
         private void radsmall_CheckedChanged(object sender, EventArgs e)
         {
-           UpdateSize();
+            UpdateOrderSummray();
         }
 
         private void radmedium_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateSize();
+            UpdateOrderSummray();
         }
 
         private void radlarg_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateSize();
+            UpdateOrderSummray();
         }
 
         private void radThin_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateCrust();
+            UpdateOrderSummray();
         }
 
         private void radThick_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateCrust();
+            UpdateOrderSummray();
         }
 
         private void chkExtra_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppings();
+            UpdateOrderSummray();
         }
 
         private void chkmushrooms_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppings();
+            UpdateOrderSummray();
         }
 
         private void chktomato_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppings();
+            UpdateOrderSummray();
         }
 
         private void radEatIn_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateWhereEat();
+            UpdateOrderSummray();
         }
 
         private void chkOnion_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppings();
+            UpdateOrderSummray();
         }
 
         private void radEatOut_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateWhereEat();
+            UpdateOrderSummray();
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppings();
+            UpdateOrderSummray();
         }
 
         private void chkPeppers_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppings();
-        }
-
-
-        
-
-        void ResetForm()
-        {
-            foreach (Control c in this.Controls)
-            {
-
-                if (c is GroupBox && c.Name != grbOrderSummry.Name)
-                {
-                    c.Enabled = true;
-                    
-                }
-            }
-
-            DefaultForm();
+            UpdateOrderSummray();
 
         }
 
-        void DefaultForm()
+
+        void UpdatePrice()
         {
-            foreach (Control c2 in grpToppings.Controls)
+            lblTotalPrice.Text = Convert.ToString(CalculatePrice()) + " $";
+        }
+        int CalculatePrice()
+        {
+            int TotalPrice = 0; 
+            
+            foreach(CheckBox T in grpToppings.Controls.OfType<CheckBox>())
             {
-                if (c2 is CheckBox)
+                if(T.Checked)
                 {
-                    CheckBox c3 = (CheckBox)c2;
-                    c3.Checked = false;
+                    TotalPrice+=Convert.ToInt32(T.Tag);
                 }
             }
+
+            TotalPrice+= Convert.ToInt32((radsmall.Checked ? radsmall.Tag : radmedium.Checked ? radmedium.Tag : radlarg.Tag));
+            TotalPrice += Convert.ToInt32((radThin.Checked ? radThin.Tag : radThick.Tag));
+
+            return TotalPrice;  
+           
+        }
+
+       void UpdateOrderSummray()
+        {
+            UpdatePrice();
+            lblSize.Text =  GetSize();
+            lblToppings.Text = GetToppings();
+            lblcrustType.Text=GetCrustType();
+            lblWhereToEat.Text = GetPlace();
+        }
+
+        string GetSize()
+        {
+            return (radsmall.Checked ? "Small" : radmedium.Checked ? "Medium" : "Large");
+        }
+        string GetPlace()
+        {
+            return (radEatIn.Checked ? "Eat In" : "Eat Out");
+        }
+        string GetCrustType()
+        {
+            return (radThick.Checked ? "Thin" : "Thick");
+        }
+        string GetToppings()
+        {
+            string toppings = "";
+            
+            foreach(CheckBox chk in grpToppings.Controls.OfType<CheckBox>())
+            {
+                if(chk.Checked)
+                {
+                    toppings += chk.Text + ", ";
+                }
+            }
+            return (toppings == "" ? "No Toppings" : toppings.Substring(0, toppings.Length - 2));
+        }
+
+
+        void ResetFrom()
+        {
+            foreach (CheckBox c in grpToppings.Controls.OfType<CheckBox>())
+            {
+                c.Checked = false;
+            }
+
+            radEatIn.Checked = true;
             radmedium.Checked = true;
             radThin.Checked = true;
-            radEatIn.Checked = true;
+
+            UpdatePrice();
+            EnableForm();
+        }
+
+        void DisableForm()
+        {
+            DialogResult Result = MessageBox.Show("Are you sure?", "Confirm!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if(Result == DialogResult.OK)
+            {
+                foreach (Control C in this.Controls)
+                {
+                    if (C is GroupBox)
+                    {
+                        C.Enabled = false;
+                    }
+
+                }
+
+                btnOrder.Enabled = false;
+            }
+            
+          
+        }
+        
+
+        void EnableForm()
+        {
+            foreach (Control C in this.Controls)
+            {
+                C.Enabled = true;
+            }
             btnOrder.Enabled = true;
         }
 
-        void Orderd()
-        {
-            if (MessageBox.Show("Are you sure you want to place this order?", "Confirm Order",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                MessageBox.Show("Order Placed Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DisableForm();
-            }
-          
-        }
-        void DisableForm()
-        {
-            foreach(Control c in this.Controls)
-            { if (c is GroupBox gb && gb.Name!=grbOrderSummry.Name)
-                {
-                    gb.Enabled = false;
-                }
-            }
-            btnOrder.Enabled = false;
 
-        }
     }
 }
