@@ -48,6 +48,9 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.grbOrderSummry = new System.Windows.Forms.GroupBox();
+            this.lblSize = new System.Windows.Forms.Label();
+            this.lblWhereToEat = new System.Windows.Forms.Label();
+            this.lblcrustType = new System.Windows.Forms.Label();
             this.lblToppings = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,9 +59,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lable8 = new System.Windows.Forms.Label();
             this.lblProjectTitle = new System.Windows.Forms.Label();
-            this.lblcrustType = new System.Windows.Forms.Label();
-            this.lblWhereToEat = new System.Windows.Forms.Label();
-            this.lblSize = new System.Windows.Forms.Label();
             this.grpSize.SuspendLayout();
             this.grpCrustType.SuspendLayout();
             this.grpToppings.SuspendLayout();
@@ -68,6 +68,7 @@
             // 
             // grpSize
             // 
+            this.grpSize.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.grpSize.Controls.Add(this.radlarg);
             this.grpSize.Controls.Add(this.radmedium);
             this.grpSize.Controls.Add(this.radsmall);
@@ -118,6 +119,7 @@
             // 
             // grpCrustType
             // 
+            this.grpCrustType.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.grpCrustType.Controls.Add(this.radThick);
             this.grpCrustType.Controls.Add(this.radThin);
             this.grpCrustType.Location = new System.Drawing.Point(55, 732);
@@ -156,7 +158,7 @@
             // 
             // grpToppings
             // 
-            this.grpToppings.BackColor = System.Drawing.Color.Snow;
+            this.grpToppings.BackColor = System.Drawing.Color.PapayaWhip;
             this.grpToppings.Controls.Add(this.chkPeppers);
             this.grpToppings.Controls.Add(this.chkOlives);
             this.grpToppings.Controls.Add(this.chkOnion);
@@ -244,6 +246,7 @@
             // 
             // grpWhereToEat
             // 
+            this.grpWhereToEat.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.grpWhereToEat.Controls.Add(this.radEatOut);
             this.grpWhereToEat.Controls.Add(this.radEatIn);
             this.grpWhereToEat.Location = new System.Drawing.Point(469, 732);
@@ -282,27 +285,29 @@
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.SandyBrown;
             this.btnReset.Location = new System.Drawing.Point(880, 994);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(338, 106);
             this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Reset Form";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnOrder
             // 
+            this.btnOrder.BackColor = System.Drawing.Color.Orange;
             this.btnOrder.Location = new System.Drawing.Point(469, 994);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(338, 106);
             this.btnOrder.TabIndex = 6;
             this.btnOrder.Text = "Order Pizza";
-            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // grbOrderSummry
             // 
-            this.grbOrderSummry.BackColor = System.Drawing.Color.White;
+            this.grbOrderSummry.BackColor = System.Drawing.Color.PapayaWhip;
             this.grbOrderSummry.Controls.Add(this.lblSize);
             this.grbOrderSummry.Controls.Add(this.lblWhereToEat);
             this.grbOrderSummry.Controls.Add(this.lblcrustType);
@@ -313,12 +318,38 @@
             this.grbOrderSummry.Controls.Add(this.lable2);
             this.grbOrderSummry.Controls.Add(this.label6);
             this.grbOrderSummry.Controls.Add(this.lable8);
-            this.grbOrderSummry.Location = new System.Drawing.Point(1302, 297);
+            this.grbOrderSummry.Location = new System.Drawing.Point(1308, 287);
             this.grbOrderSummry.Name = "grbOrderSummry";
             this.grbOrderSummry.Size = new System.Drawing.Size(764, 970);
             this.grbOrderSummry.TabIndex = 7;
             this.grbOrderSummry.TabStop = false;
             this.grbOrderSummry.Text = "Order Summry";
+            // 
+            // lblSize
+            // 
+            this.lblSize.AutoSize = true;
+            this.lblSize.Location = new System.Drawing.Point(262, 107);
+            this.lblSize.Name = "lblSize";
+            this.lblSize.Size = new System.Drawing.Size(0, 33);
+            this.lblSize.TabIndex = 9;
+            // 
+            // lblWhereToEat
+            // 
+            this.lblWhereToEat.AutoSize = true;
+            this.lblWhereToEat.Font = new System.Drawing.Font("Arial", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWhereToEat.Location = new System.Drawing.Point(350, 649);
+            this.lblWhereToEat.Name = "lblWhereToEat";
+            this.lblWhereToEat.Size = new System.Drawing.Size(0, 39);
+            this.lblWhereToEat.TabIndex = 8;
+            // 
+            // lblcrustType
+            // 
+            this.lblcrustType.AutoSize = true;
+            this.lblcrustType.Font = new System.Drawing.Font("Arial", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcrustType.Location = new System.Drawing.Point(350, 525);
+            this.lblcrustType.Name = "lblcrustType";
+            this.lblcrustType.Size = new System.Drawing.Size(0, 39);
+            this.lblcrustType.TabIndex = 7;
             // 
             // lblToppings
             // 
@@ -338,9 +369,9 @@
             this.lblTotalPrice.ForeColor = System.Drawing.Color.Blue;
             this.lblTotalPrice.Location = new System.Drawing.Point(413, 805);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(219, 88);
+            this.lblTotalPrice.Size = new System.Drawing.Size(242, 88);
             this.lblTotalPrice.TabIndex = 5;
-            this.lblTotalPrice.Text = "0.00$";
+            this.lblTotalPrice.Text = "0.00 $";
             // 
             // label1
             // 
@@ -395,40 +426,15 @@
             // 
             // lblProjectTitle
             // 
-            this.lblProjectTitle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblProjectTitle.BackColor = System.Drawing.Color.Wheat;
             this.lblProjectTitle.Font = new System.Drawing.Font("Sitka Text", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjectTitle.Location = new System.Drawing.Point(396, 55);
+            this.lblProjectTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblProjectTitle.Location = new System.Drawing.Point(402, 45);
             this.lblProjectTitle.Name = "lblProjectTitle";
             this.lblProjectTitle.Size = new System.Drawing.Size(1418, 182);
             this.lblProjectTitle.TabIndex = 1;
             this.lblProjectTitle.Text = "Make Your Pizza";
             this.lblProjectTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblcrustType
-            // 
-            this.lblcrustType.AutoSize = true;
-            this.lblcrustType.Font = new System.Drawing.Font("Arial", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcrustType.Location = new System.Drawing.Point(350, 525);
-            this.lblcrustType.Name = "lblcrustType";
-            this.lblcrustType.Size = new System.Drawing.Size(0, 39);
-            this.lblcrustType.TabIndex = 7;
-            // 
-            // lblWhereToEat
-            // 
-            this.lblWhereToEat.AutoSize = true;
-            this.lblWhereToEat.Font = new System.Drawing.Font("Arial", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWhereToEat.Location = new System.Drawing.Point(350, 649);
-            this.lblWhereToEat.Name = "lblWhereToEat";
-            this.lblWhereToEat.Size = new System.Drawing.Size(0, 39);
-            this.lblWhereToEat.TabIndex = 8;
-            // 
-            // lblSize
-            // 
-            this.lblSize.AutoSize = true;
-            this.lblSize.Location = new System.Drawing.Point(262, 107);
-            this.lblSize.Name = "lblSize";
-            this.lblSize.Size = new System.Drawing.Size(0, 33);
-            this.lblSize.TabIndex = 9;
             // 
             // Form1
             // 
@@ -436,7 +442,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.BackgroundImage = global::Make_Your_Pizza.Properties.Resources.اصنع_بيتزا_بنفسك1;
+            this.BackgroundImage = global::Make_Your_Pizza.Properties.Resources.pizza_background_3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2245, 1320);
             this.Controls.Add(this.grbOrderSummry);

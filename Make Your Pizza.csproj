@@ -111,5 +111,23 @@
   <ItemGroup>
     <None Include="Resources\اصنع بيتزا بنفسك1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza_background_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza_background_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza_background_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza_background_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza_background_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza_background_1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
