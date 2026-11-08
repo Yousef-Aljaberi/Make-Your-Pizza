@@ -28,7 +28,7 @@ This application allows users to build and customize a pizza by choosing crust t
 
 | Pizza Customizer | Order Confirmation |
 | :---: | :---: |
-| ![Customizer](mainForm.png) | ![Confirmation](ConfirumOrder.png) |
+| ![Customizer](Screen%20Shoots/1.png) | ![Confirmation](Screen%20Shoots/2.png) |
 
 ---
 
