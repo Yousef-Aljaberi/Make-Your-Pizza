@@ -57,7 +57,7 @@ This application allows users to build and customize a pizza by choosing crust t
 
 1. Clone the repository:
 ```bash
-git clone [https://github.com/Yousef-Aljaberi/Make-Your-Pizza.git](https://github.com/Yousef-Aljaberi/Make-Your-Pizza.git)
+git clone https://github.com/Yousef-Aljaberi/Make-Your-Pizza.git
 
 ```
 
