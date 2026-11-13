@@ -59,11 +59,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lable8 = new System.Windows.Forms.Label();
             this.lblProjectTitle = new System.Windows.Forms.Label();
+            this.nupAmount = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.grpSize.SuspendLayout();
             this.grpCrustType.SuspendLayout();
             this.grpToppings.SuspendLayout();
             this.grpWhereToEat.SuspendLayout();
             this.grbOrderSummry.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // grpSize
@@ -286,7 +289,7 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnReset.Location = new System.Drawing.Point(880, 994);
+            this.btnReset.Location = new System.Drawing.Point(894, 1074);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(338, 106);
             this.btnReset.TabIndex = 5;
@@ -297,7 +300,7 @@
             // btnOrder
             // 
             this.btnOrder.BackColor = System.Drawing.Color.Orange;
-            this.btnOrder.Location = new System.Drawing.Point(469, 994);
+            this.btnOrder.Location = new System.Drawing.Point(469, 1074);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(338, 106);
             this.btnOrder.TabIndex = 6;
@@ -436,6 +439,38 @@
             this.lblProjectTitle.Text = "Make Your Pizza";
             this.lblProjectTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // nupAmount
+            // 
+            this.nupAmount.Location = new System.Drawing.Point(1030, 994);
+            this.nupAmount.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nupAmount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nupAmount.Name = "nupAmount";
+            this.nupAmount.Size = new System.Drawing.Size(188, 40);
+            this.nupAmount.TabIndex = 8;
+            this.nupAmount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nupAmount.ValueChanged += new System.EventHandler(this.nupAmount_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(743, 994);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(243, 58);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Amount";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
@@ -445,6 +480,8 @@
             this.BackgroundImage = global::Make_Your_Pizza.Properties.Resources.pizza_background_3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2245, 1320);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.nupAmount);
             this.Controls.Add(this.grbOrderSummry);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnReset);
@@ -467,6 +504,7 @@
             this.grpWhereToEat.PerformLayout();
             this.grbOrderSummry.ResumeLayout(false);
             this.grbOrderSummry.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAmount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -504,6 +542,8 @@
         private System.Windows.Forms.Label lblcrustType;
         private System.Windows.Forms.Label lblWhereToEat;
         private System.Windows.Forms.Label lblSize;
+        private System.Windows.Forms.NumericUpDown nupAmount;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -82,7 +82,7 @@ namespace Make_Your_Pizza
 
         float CalculateTotalPrice()
         {
-            return GetSelectedCrustPrice() + GetSelectedSizePrice() + CalculateToppingsPrice();
+            return (GetSelectedCrustPrice() + GetSelectedSizePrice() + CalculateToppingsPrice()) *(float) nupAmount.Value ;
         }
 
         void UpdatePrice()
@@ -160,8 +160,8 @@ namespace Make_Your_Pizza
         {
            if(ConfirmMessage()==DialogResult.OK)
             {
-                MessageBox.Show("Order Placed Successfully", "Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 DisableForm();
+                MessageBox.Show("Order Placed Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void radsmall_CheckedChanged(object sender, EventArgs e)
@@ -228,6 +228,11 @@ namespace Make_Your_Pizza
         {
             UpdateToppings();
 
-        }           
+        }
+
+        private void nupAmount_ValueChanged(object sender, EventArgs e)
+        {
+            UpdatePrice();
+        }
     }
 }
